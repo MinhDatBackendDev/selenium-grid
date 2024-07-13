@@ -1,0 +1,12 @@
+<suite name="AK44" verbose="1">
+    <test name="herokuapp">
+        <classes>
+            <class name="herokuapp.FormAuthenticationTest"/>
+        </classes>
+    </test>
+    <test name="herokuapp Regression 1">
+        <classes>
+            <class name="herokuapp.FormAuthenticationTest"/>
+        </classes>
+    </test>
+</suite>
