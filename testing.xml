@@ -2,11 +2,17 @@
     <test name="herokuapp">
         <classes>
             <class name="herokuapp.FormAuthenticationTest"/>
-        </classes>
-    </test>
-    <test name="herokuapp Regression 1">
-        <classes>
-            <class name="herokuapp.FormAuthenticationTest"/>
+            <class name="herokuapp.BrokenLinkTest"/>
+            <class name="herokuapp.WebTableTest"/>
+            <class name="herokuapp.CheckboxTest"/>
+            <class name="herokuapp.ContextMenuTest"/>
+            <class name="herokuapp.DragDropTest"/>
+            <class name="herokuapp.DynamicLoadingTest"/>
+            <class name="herokuapp.DropdownTest"/>
+            <class name="herokuapp.HoverTest"/>
+            <class name="herokuapp.HyperLinkTest"/>
+            <class name="herokuapp.JSAlertsTest"/>
+            <class name="herokuapp.NestedFrameTest"/>
         </classes>
     </test>
 </suite>
