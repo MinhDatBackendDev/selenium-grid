@@ -1,9 +1,9 @@
 package supports;
 
 import org.apache.commons.io.FileUtils;
-import org.jetbrains.annotations.NotNull;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.safari.SafariDriver;
@@ -27,7 +27,9 @@ public class Browser {
     public static void launchBrowser(String name) {
         switch (name) {
             case "chrome": {
-                driver = new ChromeDriver();
+                ChromeOptions chromeOptions = new ChromeOptions();
+                chromeOptions.addArguments("--headless=new");
+                driver = new ChromeDriver(chromeOptions);
                 break;
             }
             case "firefox": {
@@ -119,22 +121,21 @@ public class Browser {
     }
 
     //    Functions handling dropdown
-    @NotNull
     public static Select getDropdown(By dropdownLocator) {
         WebElement select = getElement(dropdownLocator);
         Select dropdown = new Select(select);
         return dropdown;
     }
 
-    public static void selectOptionByName(@NotNull Select dropdown, String optionName) {
+    public static void selectOptionByName(Select dropdown, String optionName) {
         dropdown.selectByVisibleText(optionName);
     }
 
-    public static void deselectOptionByName(@NotNull Select dropdown, String optionName) {
+    public static void deselectOptionByName(Select dropdown, String optionName) {
         dropdown.deselectByValue(optionName);
     }
 
-    public static void deselectAllOptions(@NotNull Select dropdown, String optionName) {
+    public static void deselectAllOptions(Select dropdown, String optionName) {
         dropdown.deselectAll();
     }
 
