@@ -108,11 +108,12 @@ public class ChromeTest {
     @Test
     void openSeleniumHomePageAndCapturePerformanceMetrics(){
         ChromeDriver driver = new ChromeDriver();
+        driver.get("https://selenium.dev");
+
         DevTools devTools = driver.getDevTools();
         devTools.createSession();
         devTools.send(Performance.enable(Optional.empty()));
         List<Metric> metricList = devTools.send(Performance.getMetrics());
-        driver.get("https://selenium.dev");
 
         Assert.assertEquals(driver.getTitle(),"Selenium");
         driver.quit();
