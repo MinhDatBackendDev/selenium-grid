@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import pages.FormAuthenticationPage;
 import supports.Browser;
 
-public class FormAuthenticationTest  {
+public class FormAuthenticationTest extends TestBase {
 
     @DataProvider(name = "LoginData")
     public Object[][] dpMethod() {
