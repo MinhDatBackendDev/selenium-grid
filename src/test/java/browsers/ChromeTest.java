@@ -50,7 +50,6 @@ public class ChromeTest {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation);
 
-
         WebDriver driver = new ChromeDriver(chromeOptions);
         driver.get("https://www.selenium.dev/");
         Assert.assertEquals(driver.getTitle(),"Selenium");
@@ -69,7 +68,10 @@ public class ChromeTest {
 
     @Test
     void fakeGeoLocation(){
-        WebDriver driver = new ChromeDriver();
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.setBrowserVersion("128");
+        WebDriver driver = new ChromeDriver(chromeOptions);
+
         DevTools devTools = ((HasDevTools) driver).getDevTools();
         devTools.createSession();
         devTools.send(Emulation.setGeolocationOverride(Optional.of(37.774929),

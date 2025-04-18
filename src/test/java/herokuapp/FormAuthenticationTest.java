@@ -9,13 +9,13 @@ import org.testng.annotations.Test;
 import pages.FormAuthenticationPage;
 import supports.Browser;
 
-public class FormAuthenticationTest extends TestBase {
+public class FormAuthenticationTest  {
 
     @DataProvider(name = "LoginData")
     public Object[][] dpMethod() {
         return new Object[][]{
+                {"tomsmith", "SuperSecretPassword", "https://the-internet.herokuapp.com/login", "error"},
                 {"tomsmith", "SuperSecretPassword!", "https://the-internet.herokuapp.com/secure", "success"},
-                {"tomsmith", "SuperSecretPassword", "https://the-internet.herokuapp.com/login", "error"}
         };
     }
 
