@@ -2,24 +2,20 @@ package herokuapp;
 
 import commons.TestBase;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.DragDropPage;
 import supports.Browser;
+
+import java.net.MalformedURLException;
 
 public class DragDropTest extends TestBase {
     DragDropPage dragDropPage;
 
-    @BeforeClass
-    void launchBrowser() {
-        Browser.launchBrowser("chrome");
-    }
-
     @BeforeMethod
-    void openDragDropPage() {
+    void openDragDropPage() throws MalformedURLException {
+        Browser.launchBrowser("chrome");
         dragDropPage = new DragDropPage();
+        Browser.timeoutManageWait(10);
         dragDropPage.open();
     }
 
@@ -37,7 +33,7 @@ public class DragDropTest extends TestBase {
         Assert.assertEquals(dragDropPage.getSquareBText(), "A");
     }
 
-    @AfterClass
+    @AfterMethod
     void tearDown() {
         Browser.quit();
     }

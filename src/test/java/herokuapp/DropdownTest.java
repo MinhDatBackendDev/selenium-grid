@@ -2,24 +2,20 @@ package herokuapp;
 
 import commons.TestBase;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.DropdownPage;
 import supports.Browser;
+
+import java.net.MalformedURLException;
 
 public class DropdownTest extends TestBase {
     DropdownPage dropdownPage;
 
-    @BeforeClass
-    void launchBrowser() {
-        Browser.launchBrowser("chrome");
-    }
-
     @BeforeMethod
-    void openPages() {
+    void openPages() throws MalformedURLException {
+        Browser.launchBrowser("chrome");
         dropdownPage = new DropdownPage();
+        Browser.timeoutManageWait(10);
         dropdownPage.open();
     }
 
@@ -40,9 +36,10 @@ public class DropdownTest extends TestBase {
         selectOption1();
         selectOption2();
         selectOption1();
+        Assert.assertTrue(dropdownPage.isOptionSelectedInDropdown("Option 1"));
     }
 
-    @AfterClass
+    @AfterMethod
     void tearDown() {
         Browser.quit();
     }

@@ -2,24 +2,20 @@ package herokuapp;
 
 import commons.TestBase;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.JsbinDropdownPage;
 import supports.Browser;
+
+import java.net.MalformedURLException;
 
 public class JsbinDropdownPageTest extends TestBase {
     JsbinDropdownPage jsbinDropdownPage;
 
-    @BeforeClass
-    void launchBrowser() {
-        Browser.launchBrowser("chrome");
-    }
-
     @BeforeMethod
-    void openJsbinPage() {
+    void openJsbinPage() throws MalformedURLException {
+        Browser.launchBrowser("chrome");
         jsbinDropdownPage = new JsbinDropdownPage();
+        Browser.timeoutManageWait(5);
         jsbinDropdownPage.open();
     }
 
@@ -47,7 +43,7 @@ public class JsbinDropdownPageTest extends TestBase {
 //        driver.findElement(By.xpath("//*[.='Canada']")).click();
 //    }
 
-    @AfterClass
+    @AfterMethod
     void tearDown() {
         Browser.quit();
     }

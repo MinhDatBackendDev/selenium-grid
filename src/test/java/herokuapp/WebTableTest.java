@@ -2,21 +2,21 @@ package herokuapp;
 
 import commons.TestBase;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.WebTablePage;
 import supports.Browser;
 
+import java.net.MalformedURLException;
 import java.util.List;
 
 public class WebTableTest extends TestBase {
     WebTablePage webTablePage;
 
-    @BeforeClass
-    void launchBrowser() {
+    @BeforeMethod
+    void launchBrowser() throws MalformedURLException {
         Browser.launchBrowser("chrome");
         webTablePage = new WebTablePage();
+        Browser.timeoutManageWait(5);
         webTablePage.open();
     }
 
@@ -30,7 +30,7 @@ public class WebTableTest extends TestBase {
         Assert.assertEquals(webTablePage.getMinDuePerson(), List.of("Smith John", "Conway Tim"));
     }
 
-    @AfterClass
+    @AfterMethod
     void quit() {
         Browser.quit();
     }

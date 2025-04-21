@@ -2,24 +2,20 @@ package herokuapp;
 
 import commons.TestBase;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.HoverPage;
 import supports.Browser;
+
+import java.net.MalformedURLException;
 
 public class HoverTest extends TestBase {
     HoverPage hoverPage;
 
-    @BeforeClass
-    void launchBrowser() {
-        Browser.launchBrowser("chrome");
-    }
-
     @BeforeMethod
-    void openHoverPage() {
+    void openHoverPage() throws MalformedURLException {
+        Browser.launchBrowser("chrome");
         hoverPage = new HoverPage();
+        Browser.timeoutManageWait(5);
         hoverPage.open();
     }
 
@@ -38,7 +34,7 @@ public class HoverTest extends TestBase {
         Assert.assertEquals(hoverPage.getPersonLink("3"), "View profile");
     }
 
-    @AfterClass
+    @AfterMethod
     void tearDown() {
         Browser.quit();
     }

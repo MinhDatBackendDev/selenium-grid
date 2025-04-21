@@ -2,24 +2,20 @@ package herokuapp;
 
 import commons.TestBase;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.JSAlertsPage;
 import supports.Browser;
+
+import java.net.MalformedURLException;
 
 public class JSAlertsTest extends TestBase {
     JSAlertsPage jsAlertsPage;
 
-    @BeforeClass
-    void launchBrowser() {
-        Browser.launchBrowser("chrome");
-    }
-
     @BeforeMethod
-    void openJSAlertPage() {
+    void openJSAlertPage() throws MalformedURLException {
+        Browser.launchBrowser("chrome");
         jsAlertsPage = new JSAlertsPage();
+        Browser.timeoutManageWait(5);
         jsAlertsPage.open();
     }
 
@@ -81,7 +77,7 @@ public class JSAlertsTest extends TestBase {
         Assert.assertEquals(jsAlertsPage.getResultText(), "You entered: null");
     }
 
-    @AfterClass
+    @AfterMethod
     void tearDown() {
         Browser.quit();
     }

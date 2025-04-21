@@ -9,17 +9,16 @@ import org.testng.annotations.Test;
 import pages.NestedFramePage;
 import supports.Browser;
 
+import java.net.MalformedURLException;
+
 public class NestedFrameTest extends TestBase {
     NestedFramePage nestedFramePage;
 
-    @BeforeClass
-    void launchBrowser() {
-        Browser.launchBrowser("chrome");
-    }
-
     @BeforeMethod
-    void openNestedFramePage() {
+    void openNestedFramePage() throws MalformedURLException {
+        Browser.launchBrowser("chrome");
         nestedFramePage = new NestedFramePage();
+        Browser.timeoutManageWait(5);
         nestedFramePage.open();
     }
 

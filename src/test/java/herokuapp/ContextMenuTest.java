@@ -9,17 +9,16 @@ import org.testng.annotations.Test;
 import pages.ContextMenuPage;
 import supports.Browser;
 
+import java.net.MalformedURLException;
+
 public class ContextMenuTest extends TestBase {
     ContextMenuPage contextMenuPage;
 
-    @BeforeClass
-    void launchBrowser() {
-        Browser.launchBrowser("chrome");
-    }
-
     @BeforeMethod
-    void openContextMenuPage() {
+    void openContextMenuPage() throws MalformedURLException {
+        Browser.launchBrowser("chrome");
         contextMenuPage = new ContextMenuPage();
+        Browser.timeoutManageWait(10);
         contextMenuPage.open();
     }
 

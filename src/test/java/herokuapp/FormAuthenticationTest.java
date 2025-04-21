@@ -2,16 +2,16 @@ package herokuapp;
 
 import commons.TestBase;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.FormAuthenticationPage;
 import supports.Browser;
 
-public class FormAuthenticationTest extends TestBase {
+import java.net.MalformedURLException;
 
-    @DataProvider(name = "LoginData")
+public class FormAuthenticationTest {
+    FormAuthenticationPage formAuthenticationPage;
+
+    @DataProvider(name = "LoginData", parallel = true)
     public Object[][] dpMethod() {
         return new Object[][]{
                 {"tomsmith", "SuperSecretPassword", "https://the-internet.herokuapp.com/login", "error"},
@@ -19,18 +19,18 @@ public class FormAuthenticationTest extends TestBase {
         };
     }
 
-    @BeforeClass
-    void setUp() {
+    @BeforeMethod
+    void setUp() throws MalformedURLException {
         Browser.launchBrowser("chrome");
+        formAuthenticationPage = new FormAuthenticationPage();
+        Browser.timeoutManageWait(10);
+        formAuthenticationPage.open();
     }
 
     @Test(dataProvider = "LoginData")
     void checkCredential(String username, String password, String targetUrl, String className) {
-        FormAuthenticationPage formAuthenticationPage = new FormAuthenticationPage();
 
-        formAuthenticationPage
-                .open()
-                .login(username, password);
+        formAuthenticationPage.login(username, password);
 
 //        formAuthenticationPage.open();
 //        formAuthenticationPage.login(username, password);
@@ -40,7 +40,7 @@ public class FormAuthenticationTest extends TestBase {
         Assert.assertTrue(formAuthenticationPage.isMessageDisplayed(className));
     }
 
-    @AfterClass
+    @AfterMethod
     void tearDown() {
         Browser.quit();
     }

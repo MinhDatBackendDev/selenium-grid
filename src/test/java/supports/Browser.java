@@ -4,8 +4,11 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -13,6 +16,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.time.Duration;
 import java.util.List;
 
@@ -24,12 +29,19 @@ public class Browser {
 
     private static WebDriverWait wait;
 
-    public static void launchBrowser(String name) {
+    public static void launchBrowser(String name) throws MalformedURLException {
         switch (name) {
             case "chrome": {
                 ChromeOptions chromeOptions = new ChromeOptions();
-                chromeOptions.addArguments("--headless=new");
-                driver = new ChromeDriver(chromeOptions);
+//                chromeOptions.addArguments("--headless=new");
+//                driver = new ChromeDriver(chromeOptions);
+                driver = new RemoteWebDriver(new URL("http://localhost:4444/"), chromeOptions);
+                break;
+            }
+            case "edge": {
+                EdgeOptions edgeOptions = new EdgeOptions();
+//                driver = new EdgeDriver(edgeOptions);
+                driver = new RemoteWebDriver(new URL("http://localhost:4444/"), edgeOptions);
                 break;
             }
             case "firefox": {
@@ -77,6 +89,10 @@ public class Browser {
 
     public static WebElement waitUntilElementVisible(By locator) {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
+
+    public static void timeoutManageWait(long second) {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(second));
     }
 
     //    Basic functions handling Web Element

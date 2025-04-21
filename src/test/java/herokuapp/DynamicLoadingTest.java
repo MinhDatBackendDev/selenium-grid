@@ -1,24 +1,20 @@
 package herokuapp;
 
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.DynamicLoadingPage;
 import supports.Browser;
+
+import java.net.MalformedURLException;
 
 public class DynamicLoadingTest {
     DynamicLoadingPage dynamicLoadingPage;
 
-    @BeforeClass
-    void launchBrowser() {
-        Browser.launchBrowser("chrome");
-    }
-
     @BeforeMethod
-    void openDynamicLoadingPage() {
+    void openDynamicLoadingPage() throws MalformedURLException {
+        Browser.launchBrowser("chrome");
         dynamicLoadingPage = new DynamicLoadingPage();
+        Browser.timeoutManageWait(10);
         dynamicLoadingPage.open();
     }
 
@@ -35,7 +31,7 @@ public class DynamicLoadingTest {
         Assert.assertEquals(dynamicLoadingPage.wait5SecondUntilTextAppear(), "Hello World!");
     }
 
-    @AfterClass
+    @AfterMethod
     void quit() {
         Browser.quit();
     }

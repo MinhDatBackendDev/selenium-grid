@@ -2,24 +2,20 @@ package herokuapp;
 
 import commons.TestBase;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.BrokenLinkPage;
 import supports.Browser;
+
+import java.net.MalformedURLException;
 
 public class BrokenLinkTest extends TestBase {
     BrokenLinkPage brokenLinkPage;
 
-    @BeforeClass
-    void launchBrowser() {
-        Browser.launchBrowser("chrome");
-    }
-
     @BeforeMethod
-    void openBrokenLinkPage() {
+    void openBrokenLinkPage() throws MalformedURLException {
+        Browser.launchBrowser("chrome");
         brokenLinkPage = new BrokenLinkPage();
+        Browser.timeoutManageWait(5);
         brokenLinkPage.open();
     }
 
@@ -30,7 +26,7 @@ public class BrokenLinkTest extends TestBase {
     }
 
 
-    @AfterClass
+    @AfterMethod
     void tearDown() {
         Browser.quit();
     }

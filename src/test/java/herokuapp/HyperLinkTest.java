@@ -2,24 +2,20 @@ package herokuapp;
 
 import commons.TestBase;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.HyperlinkPage;
 import supports.Browser;
+
+import java.net.MalformedURLException;
 
 public class HyperLinkTest extends TestBase {
     HyperlinkPage hyperlinkPage;
 
-    @BeforeClass
-    void launchBrowser() {
-        Browser.launchBrowser("chrome");
-    }
-
     @BeforeMethod
-    void openHyperlinkPage() {
+    void openHyperlinkPage() throws MalformedURLException {
+        Browser.launchBrowser("chrome");
         hyperlinkPage = new HyperlinkPage();
+        Browser.timeoutManageWait(5);
         hyperlinkPage.open();
     }
 
@@ -49,7 +45,7 @@ public class HyperLinkTest extends TestBase {
         Assert.assertEquals(hyperlinkPage.getCurrentUrl(), "https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml");
     }
 
-    @AfterClass
+    @AfterMethod
     void tearDown() {
         Browser.quit();
     }
