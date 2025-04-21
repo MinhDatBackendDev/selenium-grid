@@ -20,7 +20,7 @@ public class EdgeTest {
         EdgeOptions edgeOptions = new EdgeOptions();
         WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444"), edgeOptions);
         driver.manage().window().maximize();
-//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         //Initialize the Edge driver
         System.out.println("The thread ID for Edge is " + Thread.currentThread().getId());
         driver.get("https://anhtester.com");
@@ -34,7 +34,7 @@ public class EdgeTest {
 //        WebDriver driver = new EdgeDriver();
         EdgeOptions edgeOptions = new EdgeOptions();
         WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444"), edgeOptions);        driver.manage().window().maximize();
-//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         //Initialize the Edge driver
         System.out.println("The thread ID for Edge is " + Thread.currentThread().getId());
         driver.get("https://anhtester.com");
