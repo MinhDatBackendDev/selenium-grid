@@ -16,7 +16,6 @@ public class EdgeTest {
     @Test
     public void EdgeTestMethod01() throws MalformedURLException {
         System.out.println("Initializing the Microsoft Edge driver");
-//        WebDriver driver = new EdgeDriver();
         EdgeOptions edgeOptions = new EdgeOptions();
         WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444"), edgeOptions);
         driver.manage().window().maximize();
@@ -31,7 +30,6 @@ public class EdgeTest {
     @Test
     public void EdgeTestMethod02() throws MalformedURLException {
         System.out.println("Initializing the Microsoft Edge driver");
-//        WebDriver driver = new EdgeDriver();
         EdgeOptions edgeOptions = new EdgeOptions();
         WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444"), edgeOptions);        driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));

@@ -16,7 +16,6 @@ public class ChromeTest {
     @Test
     public void ChromeTestMethod01() throws MalformedURLException {
         System.out.println("Initializing the Google Chrome Driver");
-//        WebDriver driver = new ChromeDriver();
         ChromeOptions chromeOptions = new ChromeOptions();
         WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444"), chromeOptions);
         driver.manage().window().maximize();
@@ -31,7 +30,6 @@ public class ChromeTest {
     @Test
     public void ChromeTestMethod02() throws MalformedURLException {
         System.out.println("Initializing the Google Chrome Driver");
-//        WebDriver driver = new ChromeDriver();
         ChromeOptions chromeOptions = new ChromeOptions();
         WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444"), chromeOptions);
         driver.manage().window().maximize();
