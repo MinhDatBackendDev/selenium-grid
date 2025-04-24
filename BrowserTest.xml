@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="AK44" verbose="1">
+    <listeners>
+        <listener class-name="org.minhdat.listeners.TestListener" />
+    </listeners>
+
+    <test name="LoginTest">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="org.minhdat.testcases.LoginTest"/>
+        </classes>
+    </test>
+</suite>

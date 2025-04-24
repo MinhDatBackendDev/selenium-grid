@@ -1,0 +1,112 @@
+[INFO ] 23-04-2025 22:35:08 [main] LogUtils - Running test case testLoginSuccess
+[INFO ] 23-04-2025 22:35:29 [main] LogUtils - Test case testLoginSuccess is passed.
+[INFO ] 23-04-2025 22:35:35 [main] LogUtils - Running test case testLoginWithEmailInvalid
+[INFO ] 23-04-2025 22:35:40 [main] LogUtils - Test case testLoginWithEmailInvalid is passed.
+[INFO ] 23-04-2025 22:35:40 [main] LogUtils - End testing Selenium_Grid
+[INFO ] 23-04-2025 23:20:24 [main] LogUtils - Running test case testLoginSuccess
+[INFO ] 23-04-2025 23:20:41 [main] LogUtils - Test case testLoginSuccess is passed.
+[INFO ] 23-04-2025 23:20:45 [main] LogUtils - Running test case testLoginWithEmailInvalid
+[INFO ] 23-04-2025 23:20:49 [main] LogUtils - Test case testLoginWithEmailInvalid is passed.
+[INFO ] 23-04-2025 23:20:49 [main] LogUtils - End testing Selenium_Grid
+[INFO ] 23-04-2025 23:24:00 [main] LogUtils - Running test case testLoginSuccess
+[INFO ] 23-04-2025 23:24:22 [main] LogUtils - Test case testLoginSuccess is passed.
+[ERROR] 23-04-2025 23:24:22 [main] LogUtils - Test case testLoginSuccess is failed.
+[ERROR] 23-04-2025 23:24:22 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because the return value of "org.minhdat.driver.DriverManager.getDriver()" is null
+[INFO ] 23-04-2025 23:24:22 [main] LogUtils - End testing Selenium_Grid
+[INFO ] 23-04-2025 23:42:17 [main] LogUtils - Running test case testLoginSuccess
+[INFO ] 23-04-2025 23:42:31 [main] LogUtils - Test case testLoginSuccess is passed.
+[ERROR] 23-04-2025 23:42:31 [main] LogUtils - Test case testLoginSuccess is failed.
+[ERROR] 23-04-2025 23:42:31 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because the return value of "org.minhdat.driver.DriverManager.getDriver()" is null
+[INFO ] 23-04-2025 23:42:31 [main] LogUtils - End testing Selenium_Grid
+[INFO ] 24-04-2025 00:01:27 [main] LogUtils - Running test case testLoginSuccess
+[INFO ] 24-04-2025 00:01:36 [main] LogUtils - Test case testLoginSuccess is passed.
+[ERROR] 24-04-2025 00:01:36 [main] LogUtils - Test case testLoginSuccess is failed.
+[ERROR] 24-04-2025 00:01:36 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because the return value of "org.minhdat.driver.DriverManager.getDriver()" is null
+[INFO ] 24-04-2025 00:01:36 [main] LogUtils - End testing Selenium_Grid
+[INFO ] 24-04-2025 07:36:59 [main] LogUtils - Running test case testLoginSuccess
+[ERROR] 24-04-2025 07:36:59 [main] LogUtils - Test case testLoginSuccess is failed.
+[ERROR] 24-04-2025 07:36:59 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null
+[INFO ] 24-04-2025 07:37:04 [main] LogUtils - Running test case testLoginWithEmailInvalid
+[ERROR] 24-04-2025 07:37:04 [main] LogUtils - Test case testLoginWithEmailInvalid is failed.
+[ERROR] 24-04-2025 07:37:04 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null
+[INFO ] 24-04-2025 07:37:06 [main] LogUtils - End testing LoginTest
+[INFO ] 24-04-2025 07:39:52 [main] LogUtils - Running test case testLoginSuccess
+[ERROR] 24-04-2025 07:39:53 [main] LogUtils - Test case testLoginSuccess is failed.
+[ERROR] 24-04-2025 07:39:53 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null
+[INFO ] 24-04-2025 07:39:56 [main] LogUtils - Running test case testLoginWithEmailInvalid
+[ERROR] 24-04-2025 07:39:56 [main] LogUtils - Test case testLoginWithEmailInvalid is failed.
+[ERROR] 24-04-2025 07:39:56 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null
+[INFO ] 24-04-2025 07:39:57 [main] LogUtils - End testing LoginTest
+[INFO ] 24-04-2025 07:42:49 [main] LogUtils - Running test case testLoginSuccess
+[ERROR] 24-04-2025 07:42:50 [main] LogUtils - Test case testLoginSuccess is failed.
+[ERROR] 24-04-2025 07:42:50 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null
+[INFO ] 24-04-2025 07:42:54 [main] LogUtils - Running test case testLoginWithEmailInvalid
+[ERROR] 24-04-2025 07:42:54 [main] LogUtils - Test case testLoginWithEmailInvalid is failed.
+[ERROR] 24-04-2025 07:42:54 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null
+[INFO ] 24-04-2025 07:42:55 [main] LogUtils - End testing LoginTest
+[INFO ] 24-04-2025 07:45:17 [main] LogUtils - Running test case testLoginSuccess
+[ERROR] 24-04-2025 07:45:18 [main] LogUtils - Test case testLoginSuccess is failed.
+[ERROR] 24-04-2025 07:45:18 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null
+[INFO ] 24-04-2025 07:45:20 [main] LogUtils - Running test case testLoginWithEmailInvalid
+[ERROR] 24-04-2025 07:45:20 [main] LogUtils - Test case testLoginWithEmailInvalid is failed.
+[ERROR] 24-04-2025 07:45:20 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null
+[INFO ] 24-04-2025 07:45:21 [main] LogUtils - End testing LoginTest
+[INFO ] 24-04-2025 07:52:37 [main] LogUtils - Running test case testLoginSuccess
+[ERROR] 24-04-2025 07:52:38 [main] LogUtils - Test case testLoginSuccess is failed.
+[ERROR] 24-04-2025 07:52:38 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null
+[INFO ] 24-04-2025 07:52:41 [main] LogUtils - Running test case testLoginWithEmailInvalid
+[ERROR] 24-04-2025 07:52:41 [main] LogUtils - Test case testLoginWithEmailInvalid is failed.
+[ERROR] 24-04-2025 07:52:41 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null
+[INFO ] 24-04-2025 07:52:41 [main] LogUtils - End testing LoginTest
+[INFO ] 24-04-2025 07:55:19 [main] LogUtils - Running test case testLoginSuccess
+[ERROR] 24-04-2025 07:55:19 [main] LogUtils - Test case testLoginSuccess is failed.
+[ERROR] 24-04-2025 07:55:19 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null
+[INFO ] 24-04-2025 07:55:23 [main] LogUtils - Running test case testLoginWithEmailInvalid
+[ERROR] 24-04-2025 07:55:23 [main] LogUtils - Test case testLoginWithEmailInvalid is failed.
+[ERROR] 24-04-2025 07:55:23 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null
+[INFO ] 24-04-2025 07:55:24 [main] LogUtils - End testing LoginTest
+[INFO ] 24-04-2025 07:58:32 [main] LogUtils - Running test case testLoginSuccess
+[ERROR] 24-04-2025 07:58:32 [main] LogUtils - Test case testLoginSuccess is failed.
+[ERROR] 24-04-2025 07:58:32 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null
+[INFO ] 24-04-2025 07:58:36 [main] LogUtils - Running test case testLoginWithEmailInvalid
+[ERROR] 24-04-2025 07:58:36 [main] LogUtils - Test case testLoginWithEmailInvalid is failed.
+[ERROR] 24-04-2025 07:58:36 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null
+[INFO ] 24-04-2025 07:58:37 [main] LogUtils - End testing LoginTest
+[INFO ] 24-04-2025 08:00:28 [main] LogUtils - Running test case testLoginSuccess
+[ERROR] 24-04-2025 08:00:29 [main] LogUtils - Test case testLoginSuccess is failed.
+[ERROR] 24-04-2025 08:00:29 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null
+[INFO ] 24-04-2025 08:00:31 [main] LogUtils - Running test case testLoginWithEmailInvalid
+[ERROR] 24-04-2025 08:00:31 [main] LogUtils - Test case testLoginWithEmailInvalid is failed.
+[ERROR] 24-04-2025 08:00:31 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null
+[INFO ] 24-04-2025 08:00:32 [main] LogUtils - End testing LoginTest
+[INFO ] 24-04-2025 08:02:39 [main] LogUtils - Running test case testLoginSuccess
+[ERROR] 24-04-2025 08:02:44 [main] LogUtils - Test case testLoginSuccess is failed.
+[ERROR] 24-04-2025 08:02:44 [main] LogUtils - org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 0.231
+  (Session info: chrome=135.0.7049.97)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [66d1a2434cc22c596bf1cf0be55767ec, get {url=https://crm.anhtester.com/admin/authentication}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.97, chrome: {chromedriverVersion: 135.0.7049.114 (63fd8a7d9d0..., userDataDir: C:\Users\truon\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60906}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60906/devtoo..., se:cdpVersion: 135.0.7049.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 66d1a2434cc22c596bf1cf0be55767ec
+[INFO ] 24-04-2025 08:02:47 [main] LogUtils - Running test case testLoginWithEmailInvalid
+[INFO ] 24-04-2025 08:02:50 [main] LogUtils - Test case testLoginWithEmailInvalid is passed.
+[INFO ] 24-04-2025 08:02:51 [main] LogUtils - End testing LoginTest
+[INFO ] 24-04-2025 08:04:18 [main] LogUtils - Running test case testLoginSuccess
+[ERROR] 24-04-2025 08:04:24 [main] LogUtils - Test case testLoginSuccess is failed.
+[ERROR] 24-04-2025 08:04:24 [main] LogUtils - org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 3.924
+  (Session info: chrome=135.0.7049.97)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d65617662502de45b5405e96dc6edbb8, get {url=https://crm.anhtester.com/admin/authentication}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.97, chrome: {chromedriverVersion: 135.0.7049.114 (63fd8a7d9d0..., userDataDir: C:\Users\truon\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60959}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60959/devtoo..., se:cdpVersion: 135.0.7049.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d65617662502de45b5405e96dc6edbb8
+[INFO ] 24-04-2025 08:04:26 [main] LogUtils - Running test case testLoginWithEmailInvalid
+[INFO ] 24-04-2025 08:04:30 [main] LogUtils - Test case testLoginWithEmailInvalid is passed.
+[INFO ] 24-04-2025 08:04:30 [main] LogUtils - End testing LoginTest
+[INFO ] 24-04-2025 08:05:46 [main] LogUtils - Running test case testLoginSuccess
+[INFO ] 24-04-2025 08:05:53 [main] LogUtils - Test case testLoginSuccess is passed.
+[INFO ] 24-04-2025 08:05:55 [main] LogUtils - Running test case testLoginWithEmailInvalid
+[INFO ] 24-04-2025 08:05:58 [main] LogUtils - Test case testLoginWithEmailInvalid is passed.
+[INFO ] 24-04-2025 08:05:58 [main] LogUtils - End testing LoginTest
